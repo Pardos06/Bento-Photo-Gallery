@@ -1,3 +1,9 @@
-@use 'variables' as *;
-@use 'mixins' as *;     
-@use 'globals' as *;
+@use './variables/colors';
+@use './variables/spacing';
+@use './variables/typography';
+
+@use './mixins/media';
+@use './mixins/transitions';
+
+@use './components/header';
+@use './components/theme-toggle';

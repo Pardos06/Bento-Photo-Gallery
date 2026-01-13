@@ -1,9 +1,11 @@
-import './App.css'
+import Header from './components/layout/Header';
 
 function App() {
   return (
    <div>
-    <h1>Bento Photo Search</h1>
+    <Header />
+    <main>  
+    </main>
    </div>
   )
 }
