@@ -1,4 +1,9 @@
-$color-bg-light: #ffffff;
-$color-bg-dark: #0f172a;
-$color-text-light: #111;
-$color-text-dark: #f8fafc;
+:root[data-theme='light'] {
+  --bg-color: #ffffff;
+  --text-color: #0f172a;
+}
+
+:root[data-theme='dark'] {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+}

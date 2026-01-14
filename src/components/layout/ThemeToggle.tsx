@@ -1,7 +1,13 @@
+import { useThemeStore } from "../../store/themeStore";
+
 function ThemeToggle() {
+    const {theme, toggleTheme} = useThemeStore();
   return (
-    <button className="theme-toggle" aria-label="Toggle theme">
-      🌙
+    <button 
+    onClick={toggleTheme} 
+    aria-label="Toggle theme"
+    title="Cambiar tema">
+      {theme === 'light' ? '🌙' : '☀️'}
     </button>
   );
 }

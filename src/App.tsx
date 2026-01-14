@@ -1,13 +1,20 @@
 import Header from './components/layout/Header';
+import { useEffect } from 'react';
+import { useThemeStore } from './store/themeStore';
 
 function App() {
-  return (
-   <div>
-    <Header />
-    <main>  
-    </main>
-   </div>
-  )
-}
+  const theme = useThemeStore((state) => state.theme);
 
-export default App
+  useEffect(() =>{
+    document.documentElement.setAttribute('data-theme', theme);
+    },[theme]);
+    return (
+      <>
+      <Header />
+      <main>
+        <h2>Welcome to Bento Photo Search</h2>
+      </main>
+      </>
+    );
+  }
+export default App;
