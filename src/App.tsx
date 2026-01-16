@@ -1,6 +1,7 @@
 import Header from './components/layout/Header';
 import { useEffect } from 'react';
 import { useThemeStore } from './store/themeStore';
+import BentoGrid from './components/gallery/BentoGrid';
 
 function App() {
   const theme = useThemeStore((state) => state.theme);
@@ -12,7 +13,7 @@ function App() {
       <>
       <Header />
       <main>
-        <h2>Welcome to Bento Photo Search</h2>
+        <BentoGrid />
       </main>
       </>
     );
