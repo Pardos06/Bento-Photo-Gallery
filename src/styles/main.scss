@@ -7,9 +7,13 @@
 
 @use './components/header';
 @use './components/theme-toggle';
+@use './components/bento-grid';
 
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+main{
+  display: block;
 }

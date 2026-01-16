@@ -1,17 +1,18 @@
-interface Props {
-    size?: 'normal' | 'wide' | 'tall';
+import type { Photo } from '../../types/photo';
+
+type BentoSize = 'wide' | 'tall' | 'normal';
+
+interface BentoGridItemProps {
+  photo: Photo;
+  size: BentoSize;
 }
 
-function BentoGridItem({ size = 'normal' }: Props){
-    return(
-        <article className={`bento-item ${size}`}> 
-            <div className="bento-placeholder"/>
-        </article>
-    );
-}
+const BentoGridItem = ({ photo, size }: BentoGridItemProps) => {
+  return (
+    <article className={`bento-item bento-item--${size}`}>
+      <img src={photo.url} alt={photo.alt} loading="lazy" />
+    </article>
+  );
+};
 
 export default BentoGridItem;
-
-//article hace que el contenido sea independiente y semántico
-//div con clase placeholder para simular una imagen o contenido
-//placeholder porque aun no contiene las imagenes

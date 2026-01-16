@@ -1,31 +1,32 @@
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     grid-auto-rows: 180px;
-    gap: 1rem;
-}
-.grid-item{
-    background-color: rgba(0, 0, 0, 0.05);
+    grid-auto-flow: dense;
+    gap: 1.25rem;
+    max-width: none;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.04);
     border-radius: 16px;
     overflow: hidden;
-}
-.bento-placeholder{
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.08),
-        rgba(0, 0, 0, 0.02)
-    );
-}
+    padding: 1.25rem;
 
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
 //auto-fill para ajustar el numero de columnas -- responsive
 //minmax para definir el tamaño minimo y maximo de las columnas
 //span para que un item ocupe mas de una fila o columna
 
-.bento-item.wide{
+.bento-item--wide{
     grid-column: span 2;
 }
-.bento-item.tall{
+.bento-item--tall{
     grid-row: span 2;
 }
