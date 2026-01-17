@@ -1,7 +1,7 @@
 import type { Photo } from '../types/photo';
 
-const MOCK_PHOTOS: Photo[] = Array.from({ length: 30 }).map((_, index) => ({
-  id: crypto.randomUUID(),
+const MOCK_PHOTOS: Photo[] = Array.from({ length: 50 }).map((_, index) => ({
+  id: `photo-${index}`,
   url: `https://picsum.photos/600/800?random=${index}`,
   alt: `Random photo ${index + 1}`,
   width: 600,

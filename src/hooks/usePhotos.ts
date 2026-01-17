@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import type { Photo } from '../types/photo';
-import { getPhotos } from '../services/photoService';
+import { useEffect, useState } from "react";
+import type { Photo } from "../types/photo";
+import { getPhotos } from "../services/photoService";
 
 export const usePhotos = () => {
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -10,7 +10,7 @@ export const usePhotos = () => {
   useEffect(() => {
     getPhotos()
       .then(setPhotos)
-      .catch(() => setError('Error al cargar imágenes'))
+      .catch(() => setError("Error al cargar imágenes"))
       .finally(() => setLoading(false));
   }, []);
 

@@ -8,9 +8,10 @@
 @use './components/header';
 @use './components/theme-toggle';
 @use './components/bento-grid';
+@use './components/loader';
 
 
-body {
+html, body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }

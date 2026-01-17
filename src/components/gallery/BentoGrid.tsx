@@ -1,25 +1,20 @@
-import BentoGridItem from './BentoGridItem';
-import { usePhotos } from '../../hooks/usePhotos';
+import BentoItem from "./BentoItem";
+import type { Photo } from "../../types/photo";
+import { getRandomSize } from "../../hooks/bentoPattern";
 
-const getSize = (index: number) => {
-  if (index % 7 === 0) return 'wide';
-  if (index % 11 === 0) return 'tall';
-  return 'normal';
+type Props = {
+  photos: Photo[];
 };
 
-function BentoGrid() {
-  const { photos, loading, error } = usePhotos();
-
-  if (loading) return <p>Cargando imágenes...</p>;
-  if (error) return <p>{error}</p>;
-
+function BentoGrid({ photos }: Props) {
   return (
     <section className="bento-grid">
       {photos.map((photo, index) => (
-        <BentoGridItem
+        <BentoItem
           key={photo.id}
           photo={photo}
-          size={getSize(index)}
+          size={getRandomSize()}
+          index={index}
         />
       ))}
     </section>
