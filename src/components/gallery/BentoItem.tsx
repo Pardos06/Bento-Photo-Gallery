@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Photo } from "../../types/photo";
 
-type BentoSize = "normal" | "wide" | "tall" | "big" | "hero";
+export type BentoSize = "normal" | "wide" | "tall" | "big" | "hero";
 
 type Props = {
   photo: Photo;

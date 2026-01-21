@@ -1,19 +1,19 @@
-import BentoItem from "./BentoItem";
+import BentoItem, {type BentoSize} from "./BentoItem";
 import type { Photo } from "../../types/photo";
-import { getRandomSize } from "../../hooks/bentoPattern";
 
 type Props = {
   photos: Photo[];
+  pattern: BentoSize[];
 };
 
-function BentoGrid({ photos }: Props) {
+function BentoGrid({photos, pattern}: Props) {
   return (
     <section className="bento-grid">
       {photos.map((photo, index) => (
         <BentoItem
           key={photo.id}
           photo={photo}
-          size={getRandomSize()}
+          size={pattern[index]}
           index={index}
         />
       ))}

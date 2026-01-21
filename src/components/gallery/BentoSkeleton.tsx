@@ -1,24 +1,19 @@
-const SIZES = [
-  'wide',
-  'normal',
-  'tall',
-  'normal',
-  'normal',
-  'wide',
-  'normal',
-  'tall',
-] as const;
+import type { BentoSize } from '../../components/gallery/BentoItem';
 
-const BentoSkeleton = () => {
-  const items = Array.from({ length: SIZES.length * 2 });
+type Props = {
+  pattern: BentoSize[];
+};
 
+const BentoSkeleton = ({ pattern }: Props) => {
   return (
     <section className="bento-grid">
-      {items.map((_, index) => (
+      {pattern.map((size, index) => (
         <article
           key={index}
-          className={`bento-item bento-item--${SIZES[index % SIZES.length]} bento-skeleton`}
-        />
+          className={`bento-item bento-item--${size}`}
+        >
+          <div className="bento-skeleton" />
+        </article>
       ))}
     </section>
   );
