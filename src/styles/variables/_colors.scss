@@ -1,9 +1,15 @@
-:root[data-theme='light'] {
-  --bg-color: #ffffff;
-  --text-color: #0f172a;
-}
-
 :root[data-theme='dark'] {
   --bg-color: #0f172a;
   --text-color: #f8fafc;
+
+  --header-bg: #1c1d30;
+  --header-text: #616d9f;
+}
+
+:root[data-theme='light'] {
+  --bg-color: #8084d0ad;
+  --text-color: #0f172a;
+
+  --header-bg: #2a2c4f;     // mismo tono, más claro
+  --header-text: #7f8bd6;   // mismo color, más luminoso
 }

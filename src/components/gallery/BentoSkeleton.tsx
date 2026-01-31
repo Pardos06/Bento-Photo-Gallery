@@ -1,4 +1,6 @@
-import type { BentoSize } from '../../components/gallery/BentoItem';
+// src/components/gallery/BentoSkeleton.tsx
+
+import type { BentoSize } from "../../hooks/bentoPattern";
 
 type Props = {
   pattern: BentoSize[];

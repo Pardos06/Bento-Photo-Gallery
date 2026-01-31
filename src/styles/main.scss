@@ -1,6 +1,6 @@
+
 @use './variables/colors';
-@use './variables/spacing';
-@use './variables/typography';
+@use './variables/variables' as *;
 
 @use './mixins/media';
 @use './mixins/transitions';
@@ -8,13 +8,5 @@
 @use './components/header';
 @use './components/theme-toggle';
 @use './components/bento-grid';
-@use './components/loader';
+@use './components/base';
 
-
-html, body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-main{
-  display: block;
-}

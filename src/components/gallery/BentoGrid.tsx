@@ -1,4 +1,6 @@
-import BentoItem, {type BentoSize} from "./BentoItem";
+// src/components/gallery/BentoGrid.tsx
+
+import BentoItem, { type BentoSize } from "./BentoItem";
 import type { Photo } from "../../types/photo";
 
 type Props = {
@@ -6,7 +8,7 @@ type Props = {
   pattern: BentoSize[];
 };
 
-function BentoGrid({photos, pattern}: Props) {
+function BentoGrid({ photos, pattern }: Props) {
   return (
     <section className="bento-grid">
       {photos.map((photo, index) => (
