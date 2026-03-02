@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
+  }, [theme]); // 
 
   // Genera el patrón UNA SOLA VEZ, basado en la cantidad real de imágenes
   if (!patternRef.current && photos.length > 0) {

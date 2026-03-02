@@ -4,6 +4,10 @@
 
   --header-bg: #1c1d30;
   --header-text: #616d9f;
+
+  --toggle-bg: rgba(255, 255, 255, 0.08);
+  --toggle-hover: rgba(255, 255, 255, 0.15);
+  --toggle-text: #c9d1ff;
 }
 
 :root[data-theme='light'] {
@@ -12,4 +16,8 @@
 
   --header-bg: #2a2c4f;     // mismo tono, más claro
   --header-text: #7f8bd6;   // mismo color, más luminoso
+
+  --toggle-bg: rgba(0, 0, 0, 0.06);
+  --toggle-hover: rgba(0, 0, 0, 0.12);
+  --toggle-text: #2a2f55;
 }

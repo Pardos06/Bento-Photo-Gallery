@@ -1,0 +1,41 @@
+@use '../variables/variables' as *;
+
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  background-color: var(--toggle-bg);
+  color: var(--toggle-text);
+
+  font-size: 18px;
+
+  transition:
+    background-color $fade-duration $ease-soft,
+    transform 0.2s ease,
+    color $fade-duration $ease-soft;
+
+  backdrop-filter: blur(6px);
+
+  &:hover {
+    background-color: var(--toggle-hover);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--header-text);
+    outline-offset: 2px;
+  }
+}

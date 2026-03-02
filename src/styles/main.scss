@@ -2,11 +2,10 @@
 @use './variables/colors';
 @use './variables/variables' as *;
 
-@use './mixins/media';
 @use './mixins/transitions';
 
 @use './components/header';
-@use './components/theme-toggle';
 @use './components/bento-grid';
+@use './components/theme-toggle';
 @use './components/base';
 
